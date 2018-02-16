@@ -1,7 +1,84 @@
 ## Parse Server Changelog
 
 ### master
-[Full Changelog](https://github.com/ParsePlatform/parse-server/compare/2.6.5...master)
+[Full Changelog](https://github.com/parse-community/parse-server/compare/2.7.2...master)
+
+### 2.7.2
+[Full Changelog](https://github.com/parse-community/parse-server/compare/2.7.2...2.7.1)
+
+#### Improvements:
+* Improved match aggregate
+* Do not mark the empty pushs as failed 
+* Support pointer in aggregate query
+* Introduces flow types for storage
+* Postgres: Refactoring of Postgres Storage Adapter
+* Postgres: Support for multiple projection in aggregate
+* Postgres: performance optimizations
+* Adds infos about vulnerability disclosures
+* Adds ability to login with email when provided as username
+
+#### Bug Fixes
+* Scrub Passwords with URL Encoded Characters
+* Fixes issue affecting using sorting in beforeFind
+
+#### Dependency Updates:
+* [commander@2.13.0](https://www.npmjs.com/package/commander)
+* [semver@5.5.0](https://www.npmjs.com/package/semver)
+* [pg-promise@7.4.0](https://www.npmjs.com/package/pg-promise)
+* [ws@4.0.0](https://www.npmjs.com/package/ws)
+* [mime@2.2.0](https://www.npmjs.com/package/mime)
+* [parse@1.11.0](https://www.npmjs.com/package/parse)
+
+##### Devevelopment Dependencies Updates:
+* [nodemon@1.14.11](https://www.npmjs.com/package/nodemon)
+* [flow-bin@0.64.0](https://www.npmjs.com/package/flow-bin)
+* [jasmine@2.9.0](https://www.npmjs.com/package/jasmine)
+* [cross-env@5.1.3](https://www.npmjs.com/package/cross-env)
+
+### 2.7.1
+[Full Changelog](https://github.com/parse-community/parse-server/compare/2.7.1...2.7.0)
+
+:warning: Fixes a security issue affecting Class Level Permissions
+
+* Adds support for dot notation when using matchesKeyInQuery, thanks to [Henrik](https://github.com/bohemima) and [Arthur Cinader](https://github.com/acinader)
+
+### 2.7.0
+[Full Changelog](https://github.com/parse-community/parse-server/compare/2.7.0...2.6.5)
+
+:warning: This version contains an issue affecting Class Level Permissions on mongoDB. Please upgrade to 2.7.1.
+
+Starting parse-server 2.7.0, the minimun nodejs version is 6.11.4, please update your engines before updating parse-server
+
+#### New Features:
+* Aggregation endpoints, thanks to [Diamond Lewis](https://github.com/dplewis)
+* Adds indexation options onto Schema endpoints, thanks to [Diamond Lewis](https://github.com/dplewis)
+
+#### Bug fixes:
+* Fixes sessionTokens being overridden in 'find' (#4332), thanks to [Benjamin Wilson Friedman](https://github.com/montymxb)
+* Proper `handleShutdown()` feature to close database connections (#4361), thanks to [CHANG, TZU-YEN](https://github.com/trylovetom)
+* Fixes issue affecting state of _PushStatus objects, thanks to [Benjamin Wilson Friedman](https://github.com/montymxb)
+* Fixes issue affecting calling password reset password pages with wrong appid, thanks to [Bryan de Leon](https://github.com/bryandel)
+* Fixes issue affecting duplicates _Sessions on successive logins, thanks to [Florent Vilmart](https://github.com/flovilmart)
+
+#### Improvements:
+* Updates contributing guides, and improves windows support, thanks to [Addison Elliott](https://github.com/addisonelliott)
+* Uses new official scoped packaged, thanks to [Florent Vilmart](https://github.com/flovilmart)
+* Improves health checks responses, thanks to [Benjamin Wilson Friedman](https://github.com/montymxb)
+* Add password confirmation to choose_password, thanks to [Worathiti Manosroi](https://github.com/pungme)
+* Improve performance of relation queries, thanks to [Florent Vilmart](https://github.com/flovilmart)
+
+#### Dependency Updates:
+* [commander@2.12.1](https://www.npmjs.com/package/commander)
+* [ws@3.3.2](https://www.npmjs.com/package/ws)
+* [uws@9.14.0](https://www.npmjs.com/package/uws)
+* [pg-promise@7.3.2](https://www.npmjs.com/package/pg-promise)
+* [parse@1.10.2](https://www.npmjs.com/package/parse)
+* [pg-promise@7.3.1](https://www.npmjs.com/package/pg-promise)
+
+##### Devevelopment Dependencies Updates:
+* [cross-env@5.1.1](https://www.npmjs.com/package/cross-env)
+
+
 
 ### 2.6.5
 [Full Changelog](https://github.com/ParsePlatform/parse-server/compare/2.6.5...2.6.4)
